@@ -87,7 +87,6 @@
             ourRequest.send();
         }
 
-
         function getRockets()
         {
             //Gets all rocket names and adds them to the selection list.
