@@ -13,6 +13,7 @@
             ourRequest.onload =function()
             { 
              window.data= JSON.parse(ourRequest.responseText);
+             getLength(window.data);
              document.getElementById("flight_number").innerHTML="Flight Number : "+  window.data["flight_number"];
              document.getElementById("mission_name").innerHTML="Misson Name : "+  window.data["mission_name"];
              document.getElementById("rocket_name").innerHTML="Rocket Name : "+  window.data.rocket["rocket_name"];
@@ -73,6 +74,7 @@
             ourRequest.onload =function()
             { 
              window.data= JSON.parse(ourRequest.responseText);
+             getLength(window.data);
              document.getElementById("flight_number").innerHTML ="Flight Number : "+  window.data[0].flight_number;
              document.getElementById("mission_name").innerHTML ="Mission Name : "+  window.data[0].mission_name;
              document.getElementById("rocket_name").innerHTML ="Rocket Name : "+  window.data[0].rocket.rocket_name
@@ -101,6 +103,7 @@
             ourRequest.onload =function ()
             {
              window.data= JSON.parse(ourRequest.responseText);  
+             getLength(window.data);
              for(var i =0 ;i< window.data.length;i++)
              {        
                 work_year= setTimeout(writeByYear,i*5000,window.data,i);
@@ -130,6 +133,7 @@
             ourRequest.onload =function()
             { 
             window.rockets= JSON.parse(ourRequest.responseText);
+            getLength(window.rockets);
             for(var i =0; i<window.rockets.length;i++)
             {
                  var rocket = document.getElementById("rockets");
@@ -156,6 +160,7 @@
             ourRequest.onload =function()
             { 
             window.data= JSON.parse(ourRequest.responseText);
+            getLength(window.data)
             for(var i =0 ;i<window.data.length;i++)
             {        
                work_rocket= setTimeout(writeByRocket,i*5000,window.data,i);
@@ -198,6 +203,15 @@
         function component(x, v)
         {
         return Math.floor(x / v);
+        }
+
+        function getLength(getLength)
+        {
+            if (getLength==0 )
+            {
+                alert("Cannot found");
+            }
+            
         }
 
        
