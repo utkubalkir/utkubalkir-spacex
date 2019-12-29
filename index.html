@@ -19,9 +19,6 @@
         <input placeholder="Flight Number" id="f_number" type="number" >
         <button onclick="getFlightNumber()">Get by Flight Number</button>
         
-        <input placeholder="Year" id="year" type="text">
-        <button onclick="getYear()">Get by Year</button>
-        
         <select class="box" id="rockets"></select>
         <button onclick="getByRockets()">Get by Rockets</button>
     </div>
@@ -47,7 +44,7 @@
     </div>
     
 <script> 
-    window.myTimer;
+    
     getData('https://api.spacexdata.com/v3/launches/next');
     getRockets();
 </script>

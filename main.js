@@ -1,4 +1,4 @@
-
+        window.myTimer;
         window.data;
         window.rockets;
         var work_year ;
@@ -27,6 +27,7 @@
         function getCountdown(time)
         {
             //Shows the countdown timer or the time the rocket was launched.
+            clcIntervals();
             if(time*1000 > Date.now())
             {
             var timestamp = (time*1000) - Date.now();
@@ -86,42 +87,6 @@
             ourRequest.send();
         }
 
-        function getYear()
-        {
-            //Returns the year in input.
-            var year = document.getElementById("year").value ;
-            getByYear('https://api.spacexdata.com/v3/launches?launch_year='+year);
-        }
-
-        function getByYear(url)
-        {
-            //Returns data for all flights in that year.
-            clcTimeOuts();
-            var ourRequest= new XMLHttpRequest()
-   
-            ourRequest.open('GET',url,true);
-            ourRequest.onload =function ()
-            {
-             window.data= JSON.parse(ourRequest.responseText);  
-             getLength(window.data);
-             for(var i =0 ;i< window.data.length;i++)
-             {        
-                work_year= setTimeout(writeByYear,i*5000,window.data,i);
-             }
-            }
-            ourRequest.send();
-
-        }
-
-        function writeByYear(data,i)
-        {
-            //Displays all flights of the year one by one every 5 seconds.
-            document.getElementById("flight_number").innerHTML ="Flight Number : "+ data[i].flight_number;
-            document.getElementById("mission_name").innerHTML ="Mission Name : "+ data[i].mission_name;
-            document.getElementById("rocket_name").innerHTML ="Rocket Name : "+ data[i].rocket.rocket_name
-            document.getElementById("launch_site_name").innerHTML ="Launch Site Name : "+ data[i].launch_site.site_name
-            getCountdown(data[i].launch_date_unix);
-        }
 
         function getRockets()
         {
@@ -193,12 +158,19 @@
                 clearTimeout(work_rocket); 
                 work_rocket--;
             }
-            while(window.myTimer>=0)
-            {
-                clearInterval(window.myTimer); 
-                window.myTimer--;
-            }
+            
         }
+
+        function clcIntervals()
+        {
+            while (window.myTimer>=0)
+            {
+                clearTimeout(window.myTimer); 
+                window.myTimer--;
+            }    
+        }
+
+        
 
         function component(x, v)
         {
@@ -211,7 +183,7 @@
             {
                 alert("Cannot found");
             }
-            
+
         }
 
        
