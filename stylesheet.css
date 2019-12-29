@@ -1,0 +1,79 @@
+h1{
+    text-align:center;
+}
+
+.topbar{
+    width: 1200px;
+    margin :50px auto 20px auto;
+}
+
+.topbar button
+{
+    margin : 10px 5px;
+    border: 1px solid black;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    background-color: rgb(40, 125, 237);
+    font-size: 15px;
+}
+
+.topbar button:hover
+{
+    margin : 10px 5px;
+    border: 1px solid black;
+    color: rgb(40, 125, 237);
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    background-color:white;
+    font-size: 15px;
+}
+
+input[type=text] {
+    width: 150px;
+    padding: 10px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid rgb(40, 125, 237);
+    color : rgb(40, 125, 237);
+    font-size: 15px;
+}
+
+.box{
+    background-color: rgb(40, 125, 237);
+    width: 150px;
+    padding: 10px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid black;
+    color : white;
+    font-size: 15px;
+}
+
+.main{
+margin :50px auto ;
+width: 1200;
+height:200px;
+background-color: white;
+border: 2px solid black ;
+}
+
+.mainleft{
+    margin:10px 15px;
+    float:left;
+}
+.mainright{
+    margin:10px;
+    float:left;
+    text-align: center;
+}
+
+
+
+.bottom{
+    text-align: center;
+}
+

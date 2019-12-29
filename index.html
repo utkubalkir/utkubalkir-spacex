@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="main.js"></script> 
+    
+    <title>SpaceX</title>
+    <script></script>
+</head>
+<body>
+    <h1>SpaceX Launches</h1>
+  
+    <div class="topbar">
+        <button onclick="getData('https://api.spacexdata.com/v3/launches/next')">Next</button>
+        <button onclick="getData('https://api.spacexdata.com/v3/launches/latest')">Latest</button>
+        
+        <input placeholder="Flight Number" id="f_number" type="text">
+        <button onclick="getFlightNumber()">Get by Flight Number</button>
+        
+        <input placeholder="Year" id="year" type="text">
+        <button onclick="getYear()">Get by Year</button>
+        
+        <select class="box" id="rockets"></select>
+        <button onclick="getByRockets()">Get by Rockets</button>
+    </div>
+
+    <div class ="main">
+        
+        <div class="mainleft">
+            <h3 id="flight_number">Flight Number : </h3>
+            <h4 id ="mission_name">Mission Name : </h4>
+            <h4 id ="rocket_name">Rocket Name : </h4>
+            <h4 id ="launch_site_name">Launch Site Name : </h4>
+        </div>
+
+        <div class="mainright">
+            <h3>Launch State</h3>
+            <h3 id ="launch_state"></h3>
+        </div>
+      
+    </div>
+
+    <div class="bottom">
+        <h3>Developed By Utku Can Balkır</h3>
+    </div>
+    
+<script> 
+    window.myTimer;
+    getData('https://api.spacexdata.com/v3/launches/next');
+    getRockets();
+</script>
+
+</body>
+</html>
