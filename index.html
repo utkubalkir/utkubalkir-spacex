@@ -16,7 +16,7 @@
         <button onclick="getData('https://api.spacexdata.com/v3/launches/next')">Next</button>
         <button onclick="getData('https://api.spacexdata.com/v3/launches/latest')">Latest</button>
         
-        <input placeholder="Flight Number" id="f_number" type="text">
+        <input placeholder="Flight Number" id="f_number" type="number" min="1" max="87">
         <button onclick="getFlightNumber()">Get by Flight Number</button>
         
         <input placeholder="Year" id="year" type="text">
