@@ -180,7 +180,6 @@
             //stops all timeouts waiting to run.
             while (work_year>=0)
             {
-                
                 clearTimeout(work_year); 
                 work_year--;
             }  
@@ -188,6 +187,11 @@
             {
                 clearTimeout(work_rocket); 
                 work_rocket--;
+            }
+            while(window.myTimer>=0)
+            {
+                clearInterval(window.myTimer); 
+                window.myTimer--;
             }
         }
 
