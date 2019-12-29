@@ -170,8 +170,6 @@
             }    
         }
 
-        
-
         function component(x, v)
         {
         return Math.floor(x / v);
@@ -181,7 +179,7 @@
         {
             if (getLength==0 )
             {
-                alert("Cannot found");
+                alert("No Data");
             }
 
         }
