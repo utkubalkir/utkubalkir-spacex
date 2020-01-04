@@ -10,12 +10,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/utkubalkir/utkubalkir-spacex1.git"
+    "url": "git+https://github.com/utkubalkir/utkubalkir-spacex.git"
   },
   "author": "Utku Can Balkır",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/utkubalkir/utkubalkir-spacex1/issues"
+    "url": "https://github.com/utkubalkir/utkubalkir-spacex/issues"
   },
-  "homepage": "https://github.com/utkubalkir/utkubalkir-spacex1#readme"
+  "homepage": "https://github.com/utkubalkir/utkubalkir-spacex#readme"
 }
